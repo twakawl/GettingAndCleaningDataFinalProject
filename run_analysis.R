@@ -63,6 +63,6 @@ which(is.na(df))
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 avg_subj_activity = aggregate(df[,2:(ncol(df)-2)], by = df[,c(1,ncol(df))],mean)
 head(avg_subj_activity)
-
+write.table(avg_subj_activity,file = "finalproject_GettingCleaningData",row.names=FALSE)
 
 
